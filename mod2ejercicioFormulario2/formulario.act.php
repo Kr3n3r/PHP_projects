@@ -28,16 +28,16 @@ if ($stmt1 = $con->prepare($query1)) {
     $stmt1->close();
 }
 
-$query = "select last_name,first_name from actor,film_actor  
+$query = "select last_name,first_name, actor.actor_id from actor,film_actor  
 where film_actor.actor_id = actor.actor_id 
 and film_actor.film_id=$film_id";
 
 
 if ($stmt = $con->prepare($query)) {
     $stmt->execute();
-    $stmt->bind_result($last_name, $first_name);
+    $stmt->bind_result($last_name, $first_name, $actor_id);
     while ($stmt->fetch()) {
-        printf("<tr><td>%s %s</td></tr>", $last_name, $first_name);
+        printf("<tr><td><a href='./datosactor.php?actor_id=%s'>%s %s</a></td></tr>", $actor_id, $last_name, $first_name);
     }
     $stmt->close();
 }

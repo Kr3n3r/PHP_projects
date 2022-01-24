@@ -1,0 +1,4 @@
+Crear un formulario que muestre en una lista desplegable todas las categorías de películas
+existentes. El usuario escogerá una de ellas y al pulsar aceptar irá a otro programa que mostrará
+el título de todas las películas que pertenezcan a dicha categoría. Mostrar arriba de la lista de
+películas el nombre de la categoría.

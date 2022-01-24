@@ -1,0 +1,3 @@
+Hacer una segunda versión del programa anterior en la que los actores aparecen en forma de
+tabla, pero son enlaces que al ser pulsados llevan a otra página que muestra todos los datos
+del actor.

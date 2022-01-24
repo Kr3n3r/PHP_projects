@@ -1,0 +1,4 @@
+Crear un formulario con una lista desplegable que muestre todos los titulos de las peliculas
+existentes en sakila. Al escoger una película se mostrará una tabla con los apellidos y nombre de
+todos los actores participantes en la película escogida. Mostrar también arriba de la tabla el
+nombre de la película.
