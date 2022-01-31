@@ -10,29 +10,36 @@ $socket="";
 $user="sakila";
 $password="sakila";
 $dbname="sakila";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());
+
+$query2= "select count(film_id) as numfilas from film";
+
+if ($stmt2 = $con->prepare($query2)) {
+    $stmt2->execute();
+    $stmt2->bind_result($numfilas);
+    $stmt2->close();
+}
+
 if (isset($_GET['offset'])){
     $offset=$_GET['offset'];
-    if ($_GET['accion']=="siguiente"){
-        $offset+=10;
-    }
-    elseif ($_GET['accion']=="anterior") {
-        $offset -=10;
-    }
-    if ($_GET['offset']<=0) {
-        $offset=0;
-    }
-    elseif ($_GET['offset']>=1000) {
-        $offset=990;
-    }
-    
 }
 else{
     $offset=0;
 }
+if ($_GET['accion']=="siguiente") {
+    if( ($offset + 10) <= $numfilas){
+        $offset += 10;
+    }
+}
+if ($_GET['accion']=="anterior") {
+    $offset -=10;
+    if ($offset < 0){
+        $offset = 0;
+    }
+}
 
-
-$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
-or die ('Could not connect to the database server' . mysqli_connect_error());
 
 $query = "select title,description from film limit $offset,10;";
 

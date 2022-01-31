@@ -1,0 +1,5 @@
+Insertar direcciones. Crear un programa que permita insertar nuevas direcciones (address) en la base
+de datos sakila. Primero deberá haber una pantalla que solicite el pais al que pertenece la dirección a
+crear. A continuación deberá aparecer un formulario con todos los datos de la dirección. La ciudad
+deberá escogerse mediante una lista desplegable donde deberán aparecer todas las ciudades del pais
+que se ha introducido en la pantalla anterior.

@@ -1,0 +1,6 @@
+Insertar ciudades. Crear un programa que permita insertar nuevas ciudades en la base de datos
+sakila. Deberá aparecer una página con una lista desplegable con todos los paises. Al escoger un pais
+se pasará a otra página donde aparecerá el id y nombre del pais junto a todas las ciudades existentes de
+dicho pais. con una caja de texto podremos insertar una nueva ciudad. Al pulsar un botón se irá a otra
+pantalla que insertará la ciudad en la base de datos, y mostrará un error o el mensaje ‘Inserción
+correcta’. Si la ciudad ya existe (en mayúsculas o minúsculas) se deberá dar un error y no insertarla.
