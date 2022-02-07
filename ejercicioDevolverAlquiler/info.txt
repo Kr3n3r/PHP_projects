@@ -1,0 +1,1 @@
+Ejercicio que devuelva un alquiler de una película

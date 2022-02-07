@@ -3,9 +3,12 @@
 <body>
 <?php 
 include_once '../utils.php';
-$customer_id=$_GET["customer_id"];
-$inventory_id=$_GET["inventory_id"];
-$staff_id=$_GET["staff_id"];
+catchRequired("customer_id");
+catchRequired("inventory_id");
+catchRequired("staff_id");
+// $customer_id=$_GET["customer_id"];
+// $inventory_id=$_GET["inventory_id"];
+// $staff_id=$_GET["staff_id"];
 
 $query = "insert into rental(inventory_id,customer_id,staff_id) values('$inventory_id','$customer_id','$staff_id');";
 
