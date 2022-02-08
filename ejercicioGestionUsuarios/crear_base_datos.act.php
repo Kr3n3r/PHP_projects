@@ -2,7 +2,7 @@
 <head><title>Crear base de datos</title></head>
 <body>
 <?php 
-include_once '../utils.php';
+include_once '../utilswindows.php';
 catchRequired("user");
 catchRequired("password");
 catchRequired("database");

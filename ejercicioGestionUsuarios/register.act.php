@@ -1,5 +1,5 @@
 <?php 
-include_once '../utils.php';
+include_once '../utilswindows.php';
 function randomPassword(){
     $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
     for ($i = 0; $i < 8; $i++) {
