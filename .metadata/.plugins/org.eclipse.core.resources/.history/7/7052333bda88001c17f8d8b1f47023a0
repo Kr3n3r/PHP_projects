@@ -1,0 +1,13 @@
+<html>
+<head><title>Creación de base de datos</title></head>
+<body>
+	<form method="get" action="crear_base_datos.act.php">
+	<label for="usuario">Usuario </label><input type="text">
+	<label for="password">Contraseña </label><input type="password">
+	<label for="database">Base de datos </label><input type="text">
+	
+	
+	
+	</form>
+</body>
+</html>

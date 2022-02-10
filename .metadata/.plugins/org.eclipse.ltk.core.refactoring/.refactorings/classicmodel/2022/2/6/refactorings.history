@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;classicmodel/skeleton&apos; to &apos;skeleton.php&apos;" description="Rename resource &apos;skeleton&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="skeleton" name="skeleton.php" stamp="1644487017615" updateReferences="true"/>
+</session>

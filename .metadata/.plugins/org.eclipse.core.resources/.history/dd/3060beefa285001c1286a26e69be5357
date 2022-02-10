@@ -1,0 +1,44 @@
+<html>
+<head><title>Insertar alquiler pg 2</title></head>
+<body>
+<?php 
+$host="10.10.0.3";
+$port=3306;
+$socket="";
+$user="sakila";
+$password="sakila";
+$dbname="sakila";
+$film_id=$_GET["film_id"];
+$customer_id=$_GET["customer_id"];
+$store_id=$_GET["store_id"];
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());?>
+
+<form method="get" action="alquiler.act.insert.php">
+
+<label for="">Películas: </label><select name="">
+<option value=""></option>
+<?php 
+$query = "select distinct inventory.inventory_id, film.title  
+from film,inventory,rental 
+where film.film_id = inventory.inventory_id 
+and inventory.inventory_id = rental.inventory_id 
+and rental.return_date is not null 
+and film.film_id=$film_id";
+
+
+if ($stmt = $con->prepare($query)) {
+    $stmt->execute();
+    $stmt->bind_result($inventory_id, $title);
+    while ($stmt->fetch()) {
+        printf("<option value='%s'>%s</option>", $inventory_id, $title);
+    }
+    $stmt->close();
+}
+?>
+</select>
+
+</form>
+</body>
+</html>
