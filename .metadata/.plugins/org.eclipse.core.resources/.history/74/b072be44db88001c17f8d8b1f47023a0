@@ -1,0 +1,8 @@
+<html>
+<head><title>Crear base de datos</title></head>
+<body>
+<?php 
+include_once 'utils.php';?>
+
+</body>
+</html>

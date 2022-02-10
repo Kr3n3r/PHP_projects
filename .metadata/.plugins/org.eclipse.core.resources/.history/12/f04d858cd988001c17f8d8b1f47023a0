@@ -1,0 +1,11 @@
+<html>
+<head><title>Creación de base de datos</title></head>
+<body>
+	<form method="get" action="crear_base_datos.act.php">
+	
+	
+	
+	
+	</form>
+</body>
+</html>
