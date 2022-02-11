@@ -1,0 +1,41 @@
+<?php 
+include_once 'utils.php';
+catched('lastName');
+catched('firstName');
+catched('extension');
+catched('email');
+catched('officeCode');
+catched('reportsTo');
+catched('jobTitle');
+catched('employeeNumber'),
+$fields=array('lastName','firstName','extension','email','officeCode','reportsTo','jobTitle');
+$up_fields=array();
+foreach ($fields as $element) {
+    if (!is_null(${$element})) {
+        array_push($up_fields,$element);
+    }
+    else{
+        if ($element == 'reportsTo'){
+            array_push($up_fields,$element);
+        }
+    }
+}
+// print_r($up_fields);
+foreach ($up_fields as $field_that_is_going_to_be_updated) {
+//     $query = "update  	
+//                 employees  
+//               set
+//               	$field_that_is_going_to_be_updated = ${$field_that_is_going_to_be_updated} 
+//               where employeeNumber=$employeeNumber";
+    
+    
+//     if ($stmt = $con->prepare($query)) {
+//         $stmt->execute();
+//         $stmt->bind_result($field1, $field2);
+//         while ($stmt->fetch()) {
+//             //printf("%s, %s\n", $field1, $field2);
+//         }
+//         $stmt->close();
+//     }
+}
+?>

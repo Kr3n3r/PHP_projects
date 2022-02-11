@@ -18,8 +18,13 @@ function catched($VALUE){
     if(!isset($_GET[$VALUE]) && !isset($_POST[$VALUE]) ){
         die("Falta el parámetro $VALUE y es requerido");
     }
+//     global ${$VALUE};
+//     ${$VALUE}= !empty($_GET[$VALUE]) ? "'${$VALUE}'" : "NULL";
     global ${$VALUE};
-    ${$VALUE}= !empty($_GET[$VALUE]) ? "'${$VALUE}'" : "NULL";
+    if (${$VALUE} = $_GET[$VALUE]){}
+    else{
+        ${$VALUE} = $_POST[$VALUE];
+    }
     return;
 }
 
