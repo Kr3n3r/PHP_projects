@@ -1,0 +1,37 @@
+<?php 
+$host="10.10.0.3";
+$port=3306;
+$socket="";
+$user="classicmodels";
+$password="classicmodels";
+$dbname="classicmodels";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());
+?>
+<html>
+<table>
+	<?php 
+	$query = "select customers.customerName , 
+sum(payments.amount) 
+from customers,payments 
+where customers.customerNumber=payments.customerNumber 
+group by customers.customerName";
+	$stmt = $con->query($query);
+	print_r($stmt);
+	while ($row = $stmt->fetch_assoc()) {
+	    $customerName = $row["customerName"];
+	    $amount = $row["amount"];
+        printf("<tr><th>%s</th><th>%s</th></tr>", $customerName, $amount);
+    }
+    $stmt->close();
+	?>
+
+</table>
+
+
+
+</html>
+<?php 
+    $con->close();
+?>

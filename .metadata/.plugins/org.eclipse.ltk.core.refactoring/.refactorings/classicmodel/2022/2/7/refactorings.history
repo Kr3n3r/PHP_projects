@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ejercicioBDClassicModels.act.php, ejercicioBDClassicModels.act.up.php, ejercicioBDClassicModels.php, skeleton.php, totalClientesPorEmpleado.php&apos; to &apos;classicmodel&apos;" description="Move 5 resources to &apos;classicmodel&apos;" destination="classicmodel" element1="ejercicioBDClassicModels.act.php" element2="ejercicioBDClassicModels.act.up.php" element3="ejercicioBDClassicModels.php" element4="skeleton.php" element5="totalClientesPorEmpleado.php" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="5" stamp="1644824999081" updateReferences="true"/>
+</session>
