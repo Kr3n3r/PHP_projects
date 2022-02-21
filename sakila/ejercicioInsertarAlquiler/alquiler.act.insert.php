@@ -2,7 +2,7 @@
 <head><title>Inserción final</title></head>
 <body>
 <?php 
-include_once '../utils.php';
+include_once '../utilswindows.php';
 catchRequired("customer_id");
 catchRequired("inventory_id");
 catchRequired("staff_id");

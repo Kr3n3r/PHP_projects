@@ -1,7 +1,9 @@
 <html>
 <head><title>Insertar alquileres : formulario inicial</title></head>
 <body>
-<?php include_once '../utils.php';?>
+<?php include_once '../utilswindows.php';
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());?>
 <form method="get" action="alquiler.act.php">
 <label for="customer_id">Cliente: </label><select name="customer_id">
 <option value=""></option>

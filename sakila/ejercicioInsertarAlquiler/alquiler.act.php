@@ -2,7 +2,9 @@
 <head><title>Insertar alquiler pg 2</title></head>
 <body>
 <?php 
-include_once '../utils.php';
+include_once '../utilswindows.php';
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());
 catchRequired("film_id");
 catchRequired("customer_id");
 catchRequired("store_id");
