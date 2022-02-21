@@ -1,18 +1,19 @@
 <html>
 <head>
-	<title>Formulario para elegir categorías</title>
+	<title>Formulario para elegir categorï¿½as</title>
 </head>
 <body>
 <form method="get" action="ejercicioMostrarPeliculas.act.php">
 	<select name="category_id[]" multiple>
 	<?php 
 // 	include_once '../utilswindows.php';
-	$host="172.17.0.2";
-	$port=3306;
-	$socket="";
-	$user="sakila";
-	$password="sakila";
-	$dbname="sakila";
+    include_once '../utils.php';
+// 	$host="172.17.0.2";
+// 	$port=3306;
+// 	$socket="";
+// 	$user="sakila";
+// 	$password="sakila";
+// 	$dbname="sakila";
 	
 	$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 	or die ('Could not connect to the database server' . mysqli_connect_error());

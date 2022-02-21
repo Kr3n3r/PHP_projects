@@ -1,21 +1,22 @@
 <html>
-<head><title>Mostrar películas por categoría</title></head>
+<head><title>Mostrar pelï¿½culas por categorï¿½a</title></head>
 <body>
-<table border="1">
 <?php 
-print_r($_GET);
+// print_r($_GET);
 $category_id=$_GET["category_id"];
-$host="172.17.0.2";
-$port=3306;
-$socket="";
-$user="sakila";
-$password="sakila";
-$dbname="sakila";
+include_once '../utils.php';
+// $host="172.17.0.2";
+// $port=3306;
+// $socket="";
+// $user="sakila";
+// $password="sakila";
+// $dbname="sakila";
 
 $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 or die ('Could not connect to the database server' . mysqli_connect_error());
 
 foreach ($category_id as $category) {
+    echo "<table border='1'>";
     $query = "select name from category where category_id='$category'";
     $stmt = $con->query($query);
     while ($row = $stmt->fetch_assoc()){
@@ -38,10 +39,10 @@ and film_category.category_id=category.category_id";
         }
         $stmt->close();
     }
+    echo "</table>";
 }
 
 $con->close();
 ?>
-</table>
 </body>
 </html>

@@ -4,17 +4,18 @@
 <table border="1">
 <th>Pel&iacutecula</th><th>N&uacutemero de alquileres</th>
 <?php 
-$host="172.17.0.2";
-$port=3306;
-$socket="";
-$user="sakila";
-$password="sakila";
-$dbname="sakila";
+include_once '../utils.php';
+// $host="172.17.0.2";
+// $port=3306;
+// $socket="";
+// $user="sakila";
+// $password="sakila";
+// $dbname="sakila";
 
 $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 or die ('Could not connect to the database server' . mysqli_connect_error());
 
-$query = "select film.title, sum(rental.rental_id) as suma 
+$query = "select film.title, count(rental.rental_id) as suma 
 from film, rental, inventory 
 where film.film_id = inventory.film_id 
 and inventory.inventory_id = rental.inventory_id 
@@ -32,7 +33,7 @@ if ($stmt = $con->prepare($query)) {
 ?>
 <th>Total:</th><th>
 <?php 
-$query = "select sum(rental_id) as total from rental";
+$query = "select count(rental_id) as total from rental";
 
 
 if ($stmt = $con->prepare($query)) {
