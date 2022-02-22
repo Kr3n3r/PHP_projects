@@ -1,11 +1,17 @@
 <html>
-<head><title>Modificar empleado</title></head>
+<head><title>Insertar nuevo producto a la order</title></head>
 <body>
 <form method="get" action="insertarNuevoProducto.act.php">
 <select name="orderNumber">
 <option value=""></option>
 <?php 
-include_once '../utils.php';
+// include_once '../utils.php';
+$host="172.17.0.2";
+$port=3306;
+$socket="";
+$user="classicmodels";
+$password="classicmodels";
+$dbname="classicmodels";
 $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 or die ('Could not connect to the database server' . mysqli_connect_error());
 
