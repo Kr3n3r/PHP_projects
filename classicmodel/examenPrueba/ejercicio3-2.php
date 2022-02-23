@@ -1,8 +1,8 @@
 <html>
 <h1>N&uacutemero de orden: <?php $orderNumber=$_GET["orderNumber"]; echo $orderNumber; ?></h1>
 <h1>Cliente: <?php
-// $host="10.10.0.3";
-$host="172.17.0.2";
+$host="10.10.0.3";
+// $host="172.17.0.2";
 $port=3306;
 $socket="";
 $user="classicmodels";
@@ -49,7 +49,7 @@ if ($stmt = $con->prepare($query)) {
     $stmt->bind_result($productName, $priceEach, $quantityOrdered, $suma);
     while ($stmt->fetch()) {
         $amount += $suma;
-        printf("<tr><td><li></li></td><td>%s</td><td>%s €</td><td>%s</td><td>%s €</td></tr>", $productName, $priceEach, $quantityOrdered, $suma);
+        printf("<tr><td><li></li></td><td>%s</td><td>%s ï¿½</td><td>%s</td><td>%s ï¿½</td></tr>", $productName, $priceEach, $quantityOrdered, $suma);
     }
     printf("<td colspan=4>Total:</td><td>%s</td>", $amount);
     $stmt->close();

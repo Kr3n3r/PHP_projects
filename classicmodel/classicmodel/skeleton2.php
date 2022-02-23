@@ -1,8 +1,8 @@
 <html>
 <head><title>Modificar empleado</title></head>
 <body>
-<form method="get" action=".php">
-<?php 
+
+<?php
 
 include_once 'utils.php';
 
@@ -20,6 +20,6 @@ or die ('Could not connect to the database server' . mysqli_connect_error());
 
 $con->close();
 ?>
-</form>
+
 </body>
 </html>
