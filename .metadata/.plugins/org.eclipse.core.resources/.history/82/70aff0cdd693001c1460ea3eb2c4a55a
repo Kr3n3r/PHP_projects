@@ -1,0 +1,9 @@
+<html><head><title>Seleccionar oficina para cambiar la actual</title></head>
+<body>
+<label for="officeCode">Oficina:</label><select name="officeCode">
+
+</select>
+
+
+
+</body></html>

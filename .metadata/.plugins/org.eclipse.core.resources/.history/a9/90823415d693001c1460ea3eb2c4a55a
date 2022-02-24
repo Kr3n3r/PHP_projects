@@ -1,0 +1,14 @@
+<html><head><title>Escoger empleado</title></head>
+<body>
+<form action="ejercicio2-2.php" method="get">
+<select name="employeeNumber">
+<?php ?>
+
+</select>
+</form>
+
+
+
+
+</body>
+</html>

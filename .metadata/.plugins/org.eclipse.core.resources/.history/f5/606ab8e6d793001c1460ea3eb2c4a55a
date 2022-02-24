@@ -1,0 +1,23 @@
+<html>
+<head><title>Modificación</title></head>
+<body>
+<?php 
+$host="10.10.0.3";
+$port=3306;
+$socket="";
+$user="classicmodels";
+$password="classicmodels";
+$dbname="classicmodels";
+$Code=explode(" ",$_GET["Code"]);
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());
+
+$query = "update employees set officeCode = '$Code[2]' where employeeNumber='$Code[1]'";
+
+$con->query($query);
+
+$con->close();
+?>
+</body>
+</html>

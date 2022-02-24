@@ -1,0 +1,26 @@
+<h1>N&uacutemero de orden: <?php $orderNumber=$_GET["orderNumber"]; echo $orderNumber; ?></h1>
+<h1>Cliente: <?php
+$host="10.10.0.3";
+$port=3306;
+$socket="";
+$user="classicmodels";
+$password="classicmodels";
+$dbname="classicmodels";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+or die ('Could not connect to the database server' . mysqli_connect_error());
+
+$query = "select customers.customerName from customers join orders on orders.customerNumber=customers.customerNumber  where orders.orderNumber=$orderNumber";
+
+
+if ($stmt = $con->prepare($query)) {
+    $stmt->execute();
+    $stmt->bind_result($customerNumber);
+    while ($stmt->fetch()) {
+        printf("%s", $customerNumber);
+    }
+    $stmt->close();
+}
+
+
+?></h1>

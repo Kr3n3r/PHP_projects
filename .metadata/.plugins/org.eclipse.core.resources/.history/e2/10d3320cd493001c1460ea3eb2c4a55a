@@ -1,0 +1,10 @@
+<html>
+<head>Escoger productos</head>
+<body>
+<form action="ejercicio1-2.php" method="get">
+Productos:<select name="productos[]" multiple>
+
+</select>
+</form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>N&uacutemero de orden: <?php echo $_GET["orderNumber"];?></h1>
+<h1>Cliente: <?php 
+
+
+
+?></h1>
